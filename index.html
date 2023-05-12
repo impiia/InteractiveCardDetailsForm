@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <section class="card-section">
+
+      <div class="wrapper">
+        <form class="card__data">
+          <div class="card__front-side">
+            <div class="card__fs_data">
+              <div class="card__fs_line_first">
+                <h1 id="cardNumberOutput">0000 0000 0000 0000</h1>
+              </div>
+              <div class="card__fs_line_second">
+                <h2 id="cardOwnerName">JANE APPLESEED</h2>
+                <p>
+                  <span id="cardMM">00</span>/<span id="cardYY">00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__back-side">
+
+            <p id="cardCvc">000</p>
+
+          </div>
+
+          <div class="card__info">
+            <div class="card__cn">
+              <label for="card__cn_field">CARDHOLDER NAME</label>
+              <input type="text" class="card__cn_field" placeholder="e.g. Jane Appleseed">
+
+            </div>
+
+            <div class="card__number">
+              <label for="card__number_field">CARD NUMBER</label>
+              <input type="text" class="card__number_field" placeholder="e.g. 1234 5678 9123 0000">
+              <p class="card__error_text" id="numberErrorText">Wrong format, numbers only</p>
+            </div>
+
+            <div class="card__period_cvc">
+              <div class="card__exp_period">
+                <label for="card__month_field card__year_field">Exp. Date (MM/YY)</label>
+                <div class="card__exp_period_my">
+                  <input type="text" class="card__month_field" placeholder="MM">
+                  <input type="text" class="card__year_field" placeholder="YY">
+                </div>
+                <p class="card__error_text" id="periodErrorText">Can't be blank</p>
+              </div>
+              <div class="card_cvc">
+                <label for="card__cvc_field">CVC</label>
+                <input type="text" class="card__cvc_field" placeholder="e.g. 123">
+                <p class="card__error_text" id="cvcErrorText">Can't be blank</p>
+              </div>
+            </div>
+            <button type="button" class="card__confirm" onclick="validateForm()">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/impiia">Impiia</a>.
+    </div>
+  </footer>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
